@@ -2,7 +2,7 @@
 
 Simple and clean UI library for Roblox executors.
 
-## Usage
+## Basic Setup
 
 ```lua
 local Buster = loadstring(game:HttpGet("http://212.227.64.179:9172/raw/buster-ui-library"))()
@@ -25,7 +25,11 @@ local Panel = Tab:CreatePanel({
     Column = "Left", 
     Title = "Main Features"
 })
+```
 
+## Toggle
+
+```lua
 Panel:CreateToggle({
     Name = "Toggle Example",
     Default = false,
@@ -33,14 +37,22 @@ Panel:CreateToggle({
         print("Toggle:", value)
     end
 })
+```
 
+## Button
+
+```lua
 Panel:CreateButton({
     Name = "Button Example",
     Callback = function()
         print("Button clicked")
     end
 })
+```
 
+## Slider
+
+```lua
 Panel:CreateSlider({
     Name = "Slider Example",
     Min = 0,
@@ -51,7 +63,11 @@ Panel:CreateSlider({
         print("Slider:", value)
     end
 })
+```
 
+## Keybind
+
+```lua
 Panel:CreateKeybind({
     Name = "Keybind Example",
     Default = Enum.KeyCode.E,
@@ -59,7 +75,11 @@ Panel:CreateKeybind({
         print("Keybind:", key.Name)
     end
 })
+```
 
+## Dropdown
+
+```lua
 Panel:CreateDropdown({
     Name = "Dropdown Example",
     List = {"Option 1", "Option 2", "Option 3"},
@@ -68,21 +88,13 @@ Panel:CreateDropdown({
         print("Dropdown:", value)
     end
 })
+```
 
+## Label
+
+```lua
 Panel:CreateLabel({ 
     Text = "Label Example", 
     Size = 11 
 })
 ```
-
-## Features
-
-- CreateWindow
-- CreateTab
-- CreatePanel
-- CreateToggle
-- CreateButton
-- CreateSlider
-- CreateKeybind
-- CreateDropdown
-- CreateLabel
