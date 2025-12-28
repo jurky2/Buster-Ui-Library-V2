@@ -27,6 +27,33 @@ local Panel = Tab:CreatePanel({
 })
 ```
 
+## Home Page
+
+```lua
+local homeTab = Buster:CreateHomeTab(Window, {
+    Icon = "rbxassetid://11295288868",
+    Backdrop = 0,
+    DiscordInvite = "yourcode",
+    SupportedExecutors = {
+        "Synapse X",
+        "Wave",
+        "Delta",
+        "Codex"
+    },
+    UnsupportedExecutors = {
+        "Solara",
+        "Swift"
+    },
+    Changelog = {
+        {
+            Title = "Version 1.0.0",
+            Date = "December 2024",
+            Description = "Initial release"
+        }
+    }
+})
+```
+
 ## Toggle
 
 ```lua
