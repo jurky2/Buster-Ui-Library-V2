@@ -1172,6 +1172,15 @@ function Buster:CreateWindow(options)
             card.Size = UDim2.new(1, -(cardInset * 2), 0, 100)
             card.Position = UDim2.new(0, cardInset, 0, 0)
             card.Parent = target
+            do
+                local maxOrder = 0
+                for _, ch in ipairs(target:GetChildren()) do
+                    if type(ch.LayoutOrder) == "number" then
+                        maxOrder = math.max(maxOrder, ch.LayoutOrder)
+                    end
+                end
+                card.LayoutOrder = maxOrder + 1
+            end
             applyCorner(card, 10)
             applyStroke(card, Theme.StrokeSoft, 0.55)
 
