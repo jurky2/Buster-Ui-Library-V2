@@ -2077,7 +2077,7 @@ function Buster:CreateHomeTab(window, options)
 
     local welcome = Instance.new("Frame")
     welcome.Name = "HomeWelcome"
-    welcome.BackgroundColor3 = (window._accentColor and Color3.fromString(tostring(window._accentColor))) or Theme.Card
+    welcome.BackgroundColor3 = window._accentColor or Theme.Card
     welcome.BorderSizePixel = 0
     welcome.Size = UDim2.new(1, 0, 0, welcomeHeight)
     welcome.Position = UDim2.new(0, 0, 0, 0)
@@ -2107,7 +2107,7 @@ function Buster:CreateHomeTab(window, options)
 
     local backdropFade = Instance.new("Frame")
     backdropFade.Name = "HomeBackdropFade"
-    backdropFade.BackgroundColor3 = (window._accentColor and Color3.fromString(tostring(window._accentColor))) or Theme.Card
+    backdropFade.BackgroundColor3 = window._accentColor or Theme.Card
     backdropFade.BorderSizePixel = 0
     backdropFade.BackgroundTransparency = 0.2
     backdropFade.Size = UDim2.new(1, 0, 1, 0)
